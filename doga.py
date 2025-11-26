@@ -18,7 +18,10 @@ while True:
     egesz = int(input("Írd be az egész számokat, ha abba szeretnéd hagyni írj be 0-át! "))
     lista.append(egesz)
     if 0 in lista:
+        lista.remove(int(0))
         break
+    
+
 
 print(lista)
 
@@ -43,7 +46,7 @@ for i in lista:
     if i % 2 == 0 and i % 5 == 0:
         lista.index(i)
         masodik.append(i)
-masodik.remove(int(0))
+
 try:
     print(f"Az utolsó 2-vel és 5-el osztható szám indexe: {lista.index(masodik[-1])+1}.")
 except IndexError:
@@ -65,9 +68,9 @@ print(f"{szamlalas} darab szám volt ami 20-nál nagyobb")
 # Negyedik feladat:
 print("Negyedik feladat:")
 
-negy = max(lista)
+negy = min(lista)
 
-print(f"A legnagyobb szám a listában {negy}, helye: {lista.index(negy)+1}")
+print(f"A legkisebb szám a listában {negy}, helye: {lista.index(negy)+1}")
 
 # Ötödik feladat:
 print("Ötödik feladat:")
